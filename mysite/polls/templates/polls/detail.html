@@ -6,6 +6,7 @@
 {% csrf_token %}
 {% for choice in question.choice_set.all %}
     <input type="radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}">
+    <!--forloop.counter indicates how many times the for tag has gone through this loop-->
     <label for="choice{{forloop.counter}}">{{
         choice.choice_text
     }}</label><br>
